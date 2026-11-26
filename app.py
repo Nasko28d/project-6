@@ -13,3 +13,10 @@ for book in st.session_state.books:
     found = True    
   if found == False:        
     st.warning("Няма такава книга!")
+st.subheader("Изтриване на книга")
+if len(st.session_state.books) > 0:    
+selected_book = st.selectbox(        "Изберете книга:",        st.session_state.books    )    if st.button("Изтрий"):        
+st.session_state.books.remove(selected_book)        
+st.success("Книгата е изтрита!")        
+st.rerun()else:    
+st.info("Библиотеката е празна!")
