@@ -19,5 +19,6 @@ if len(st.session_state.books) > 0:
   if st.button("Изтрий"):        
     st.session_state.books.remove(selected_book)        
     st.success("Книгата е изтрита!")        
-    st.rerun()else:    
+    st.rerun()
+  else:    
     st.info("Библиотеката е празна!")
